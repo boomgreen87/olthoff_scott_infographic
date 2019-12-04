@@ -5,3 +5,77 @@
 .hidden {
     display: none;
 }
+
+// Sets layout of page
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// Positions title and team logos
+#infoTop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+// Styles and positions title
+#title {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+    transition: 0.25s ease-out;
+}
+
+// Positions the teams
+#teams {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+// Aligns logos
+#teamsFirst, #teamsSecond {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+// Sizes and styles the logos
+.teamLogo {
+    width: 75px;
+    margin: 10px;
+    opacity: 0.5;
+    transition: 0.25s ease-out;
+}
+
+// Sets hover effects on logos
+.teamLogo:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+// Sets opacity of selected logo to 1
+.teamLogo.selected {
+    opacity: 1;
+}
+
+
+
+
+@media screen and (min-width: 500px) {
+    // Positions the teams
+    #teams {
+        flex-direction: row;
+    }
+    
+    // Sizes and styles the logos
+    .teamLogo {
+        width: 100%;
+        max-width: 150px;
+        margin: 10px;
+    }
+}
